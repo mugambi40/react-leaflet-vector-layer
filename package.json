@@ -1,7 +1,7 @@
 {
   "name": "react-leaflet-vector-layer",
   "version": "0.1.7",
-  "description": "React Leaflet V3 layer for displaying vector tiles without need for access token. Forked from ted-piotrowski",
+  "description": "React Leaflet V3 layer for displaying vector tiles without need for access token.",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
