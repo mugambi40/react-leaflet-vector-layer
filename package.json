@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-vector-layer",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "React Leaflet V3 layer for displaying vector tiles without need for access token.",
   "main": "dist/index.js",
   "repository": {
@@ -8,18 +8,19 @@
     "url": "git+https://github.com/mugambi40/react-leaflet-vector-layer.git"
   },
   "scripts": {
-    "build": "rm -rf dist && yarn add -D @react-leaflet/core && tsc && yarn run minify && yarn remove @react-leaflet/core",
-    "minify": "uglifyjs --compress --mangle --output dist/index.min.js -- dist/index.js"
+    "build": "rimraf dist && yarn add -D @react-leaflet/core@1.0.2 && tsc && yarn run minify && yarn remove @react-leaflet/core",
+    "minify": "uglifyjs --compress --mangle --output dist/index.min.js -- dist/index.js",
+    "prepublishOnly": "npm run build"
   },
-  "author": "Ted Piotrowski",
+  "author": "Lawrence Mugambi",
   "license": "MIT",
   "peerDependencies": {
-    "leaflet": "^1.7.1",
-    "react-leaflet": "^3.0.5"
+    "react-leaflet": "^3.2.2"
   },
   "devDependencies": {
     "@types/leaflet": "^1.5.21",
     "@types/react": "^16.8.6",
+    "rimraf": "^3.0.2",
     "typescript": "^4.1.3",
     "uglify-js": "^3.12.5"
   },
@@ -33,7 +34,7 @@
     "react-leaflet-v3"
   ],
   "dependencies": {
-    "mapbox-gl": "1.13.0",
-    "mapbox-gl-leaflet": "^0.0.15"
+    "@maplibre/maplibre-gl-leaflet": "^0.0.15",
+    "maplibre-gl": "^2.2.1"
   }
 }
